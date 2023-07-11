@@ -10,13 +10,13 @@ listener calendar:Listener webhookListener =  new(config,httpListener);
 service calendar:CalendarService on webhookListener {
   
     remote function onNewEvent(calendar:Event payload ) returns error? {
-      io:println("Hi");
+      io:println("onNewEvent");
     }
     remote function onEventUpdate(calendar:Event payload ) returns error? {
-      io:println("Hi");
+      io:println("onEventUpdate");
     }
     remote function onEventDelete(calendar:Event payload ) returns error? {
-      io:println("Hi");
+      io:println("onEventDelete");
     }
 }
 
